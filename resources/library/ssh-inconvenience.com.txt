@@ -1,0 +1,7 @@
+ssh -vT git@github.com		# now this rubbish crap is diverting to the wrong key even though I cloned the repo fine with ssh the first time
+# c#$t bags
+
+
+# apparently this rubbish command can tell it where to look:
+# Noting below wasted more time and more manuallabour/slave-driving:
+	# git config --local core.sshCommand 'ssh -i ~/.ssh/your_private_key_file -o IdentitiesOnly=yes'
