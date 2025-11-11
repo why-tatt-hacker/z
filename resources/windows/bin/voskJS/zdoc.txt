@@ -1,0 +1,4 @@
+# https://github.com/solyarisoftware/voskJS
+# https://github.com/solyarisoftware/voskJs/blob/master/examples/README.md#simple-program-for-a-sentence-based-speech-to-text
+
+voskjs --audio=audio/test.wav --model=models/vosk-model-small-en-us-0.15
