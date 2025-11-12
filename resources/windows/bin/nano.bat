@@ -1,3 +1,3 @@
 @echo off
 
-notepad %*
+start notepad %*

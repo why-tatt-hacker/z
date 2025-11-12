@@ -1,1 +1,6 @@
-cmd /k $*
+@echo off
+
+; start cmd /k %*
+
+start %*
+
