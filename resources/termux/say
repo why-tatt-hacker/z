@@ -1,0 +1,4 @@
+
+
+
+espeak -ven-us+f5 "$@"

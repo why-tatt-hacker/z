@@ -1,0 +1,11 @@
+if [ -z "$1" ]; then
+	echo "usage: ipaddress <public | private>"
+else
+	if [ "$1" == "public" ]; then
+		curl ifconfig.me
+	elif [ "$1" == "private" ]; then
+		echo "7.71.93.80"
+	else
+		echo 'invalid parameter'
+	fi
+fi

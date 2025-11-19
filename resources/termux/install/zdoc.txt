@@ -1,0 +1,12 @@
+# todo: this set up should be portable to any architecture.
+
+# i.e pkg install libncurses5-dev gcc 
+
+0. create the repo to clone this. Add collaborators and fork for secure secondary account secur
+1. get ft_select     # should sophisticate it further at some point.
+2. devise a p n' p install script of dependency management
+3. plan: now what is this/your infastructure missing?
+   A. inputs innacurate and slow.
+   B. Looking at the identical voice considerations
+      as architectured for during game sessions.
+4. 

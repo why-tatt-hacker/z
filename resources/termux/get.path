@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export shortcutsPath=~/.bruw/bin/shortcuts
+
+# sed '/'$1'=/d' $shortcutsPath/shortcuts > $shortcutsPath/shortcuts
+echo "alias "$1"=\"cd "`pwd`"\"" >> $shortcutsPath/shortcuts
+
+# . ~/.bruw/bin/shortcuts/shortcuts
+# . alias $1="cd "`pwd`

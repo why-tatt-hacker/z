@@ -1,0 +1,20 @@
+#!/data/data/com.termux/files/usr/bin/php
+
+<?php
+	$myfile = fopen("/data/data/com.termux/files/home/.bruw/bin/calculator/calculate.php", "w") or die("Unable to open file!");
+	$txt = '<?php ' .
+	'function factorial($n) ' .
+	'{ ' .
+	' if($n <= 1) { ' .
+	'    return 1; ' .  
+	'  } ' .
+	'  else { ' .
+	'    return $n * factorial($n - 1); ' .
+	'  } ' .
+	'} ' .
+	' echo ' . $argv[1] . '; ?>';
+	fwrite($myfile, $txt);
+	fclose($myfile);
+
+	system("php ~/.bruw/bin/calculator/calculate.php")
+?>

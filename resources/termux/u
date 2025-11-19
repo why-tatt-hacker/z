@@ -1,0 +1,1 @@
+grep -r "$1" /data/data/com.termux/files/home/storage/downloads/unicode/zdoc.txt | cut -f 1 -d ":"
