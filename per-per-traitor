@@ -1,0 +1,68 @@
+# This is just some baselines because I am finding it very annoyingly un-amusing to get back into my own git accounts:
+# 	So documenting the procedures and tracking the process changes now.
+
+# Noting: once crudable can clear histories etc
+# referencing: https://www.warp.dev/terminus/git-clone-ssh
+#   but noting social-engineering-wise it is as usual missing some key integral steps. should maybe add my own ssh manuals - for fun?
+
+USER=${1} # "<user-name-here>"
+REPO_NAME=z  #"z"
+EMAIL=${2}   # "<email-here>"
+
+git config --global user.name "${USER}"
+git config --global user.email "${EMAIL}"
+
+# ssh-keygen -t ed25519 -C "${EMAIL}"
+# ssh-keygen -t ed25519 -C "${EMAIL}" -f manuallabour
+ssh-keygen -t ed25519 -C "${EMAIL}" -f manuallabour -N ${3}   # weak pass raw poe - yet so weak I couldnt even clone my own shit still
+
+# -f ./my-ssh.key  # may work to establis a name on gen not during
+# -N "your_passphrase_here"
+
+# need attempts to verify 
+cat manuallabour.pub | xclip -sel clip
+
+
+mv ./manuallabour* "${HOME}/.ssh/"
+ssh-agent /bin/ssh-add "${HOME}/.ssh/manuallabour"   # apparently did not work without this line
+
+
+echo check here if is in folder or not ls'ing it for now:
+ls ~/.ssh     # see if they now exist but actually gen in your cwd so we moved it there above
+
+
+echo "https://github.com/settings/ssh/new" | termux-clip
+
+#eval "$(ssh-agent -s)"
+#ssh-add ~/.ssh/per-per-traitor
+
+# ssh -T git@github.com
+
+
+
+# https://github.com/settings/ssh/new
+# basically cat
+# git clone "git@github.com:${USER}/${REPO_NAME}.git"
+
+# need some housekeeping install mgt script:
+
+# install brew here.
+# brew install xclip
+#    xclip -sel clip          pbcopy and clip
+# whereis brew: /var/home/linuxbrew/.linuxbrew/bin/brew
+# where     # does not exist
+
+# /var/lib/flatpak/app
+# exec /app/lib/firefox/firefox --name org.mozilla.firefox "$@"
+
+# exec /var/lib/flatpak/app/lib/firefox/firefox --name org.mozilla.firefox "$@"
+
+
+
+
+# TODO CRUD, manage ssh keys from the key gen and see if we can fix our own static one to reduce manual labour?
+
+
+git clone "https://github.com/why-tatt-hacker/z"
+
+# ssh -T git@github.com
